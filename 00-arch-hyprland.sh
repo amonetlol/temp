@@ -35,11 +35,11 @@ sudo pacman -Syu --noconfirm
 # Download some terminal tool
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[3/10]${GREEN} ==> Download some terminal tool\n---------------------------------------------------------------------\n${WHITE}"
 sudo pacman -S --noconfirm --needed base-devel git
-git clone https://aur.archlinux.org/yay-bin
-cd yay-bin
+git clone https://aur.archlinux.org/yay
+cd yay
 makepkg -si --noconfirm
 cd ~
-rm -rf ~/yay-bin
+rm -rf ~/yay
 
 
 pacman_packages=(
