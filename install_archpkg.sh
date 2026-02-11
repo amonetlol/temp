@@ -25,7 +25,8 @@ aur_packages=(
     # System Utilities and Media
 
     # Communication
-    zen-browser-bin
+    #zen-browser-bin
+    firefox
 
     # Code Editors and IDEs
     visual-studio-code-bin  
