@@ -9,7 +9,7 @@ pacman_packages=(
     network-manager-applet bluez bluez-utils blueman pipewire wireplumber pavucontrol
     
     # System Utilities and Media
-    foot thunar thunar thunar-archive-plugin gvfs loupe xarchive unrar 7zip
+    foot thunar thunar thunar-archive-plugin gvfs loupe xarchiver unrar 7zip
     
     # Qt & Display Manager Support
     sddm qt5ct qt6ct qt5-wayland qt6-wayland
