@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-
+root_dir=$PWD
 # Variables
 #----------------------------
 # Color variables
@@ -38,8 +38,8 @@ sudo pacman -S --noconfirm --needed base-devel git
 git clone https://aur.archlinux.org/yay
 cd yay
 makepkg -si --noconfirm
-cd ~
-rm -rf ~/yay
+cd $root_dir
+rm -rf root_dir/yay
 
 
 pacman_packages=(
@@ -75,8 +75,8 @@ sudo pacman -S --noconfirm "${pacman_packages[@]}"
 echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[2/11]${PINK} ==> Setup terminal\n---------------------------------------------------------------------\n${WHITE}"
 sleep 0.5
 #bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/arch.sh)"
-chmod +x $PWD/install_archpkg.sh
-$PWD/install_archpkg.sh
+chmod +x $root_dir/install_archpkg.sh
+$root_dir/install_archpkg.sh
 
 # enable bluetooth & networkmanager
 echo -e "${BLUE}\n---------------------------------------------------------------------\n${YELLOW}[6/11]${BLUE} ==> Enable bluetooth & networkmanager\n---------------------------------------------------------------------\n${WHITE}"
