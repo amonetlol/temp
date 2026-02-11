@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-root_dir=$PWD
+
 # Variables
 #----------------------------
 # Color variables
@@ -9,6 +9,12 @@ GREEN="\e[32m"
 WHITE="\e[0m"
 YELLOW="\e[33m"
 BLUE="\e[34m"
+
+root_dir=$(pwd)
+
+# time variable
+start=$(date +%s)
+
 #----------------------------
 
 # Welcome message
