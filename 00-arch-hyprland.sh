@@ -79,13 +79,13 @@ chmod +x $PWD/install_archpkg.sh
 $PWD/install_archpkg.sh
 
 # enable bluetooth & networkmanager
-echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[6/11]${PINK} ==> Enable bluetooth & networkmanager\n---------------------------------------------------------------------\n${WHITE}"
+echo -e "${BLUE}\n---------------------------------------------------------------------\n${YELLOW}[6/11]${BLUE} ==> Enable bluetooth & networkmanager\n---------------------------------------------------------------------\n${WHITE}"
 sleep 0.5
 #sudo systemctl enable --now bluetooth
 sudo systemctl enable --now NetworkManager
 
 # Check display manager
-echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[11/11]${PINK} ==> Check display manager\n---------------------------------------------------------------------\n${WHITE}"
+echo -e "${BLUE}\n---------------------------------------------------------------------\n${YELLOW}[11/11]${BLUE} ==> Check display manager\n---------------------------------------------------------------------\n${WHITE}"
 if [[ ! -e /etc/systemd/system/display-manager.service ]]; then
     sudo systemctl enable sddm
     echo -e "[Theme]\nCurrent=sddm-astronaut-theme" | sudo tee -a /etc/sddm.conf
@@ -99,11 +99,11 @@ git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
 sudo chmod +x ~/dotfiles/.config/viegphunt/*
 
 # Apply fonts
-echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[8/11]${PINK} ==> Apply fonts\n---------------------------------------------------------------------\n${WHITE}"
+echo -e "${BLUE}\n---------------------------------------------------------------------\n${YELLOW}[8/11]${BLUE} ==> Apply fonts\n---------------------------------------------------------------------\n${WHITE}"
 fc-cache -fv
 
 # Set cursor
-echo -e "${PINK}\n---------------------------------------------------------------------\n${YELLOW}[9/11]${PINK} ==> Set cursor\n---------------------------------------------------------------------\n${WHITE}"
+echo -e "${BLUE}\n---------------------------------------------------------------------\n${YELLOW}[9/11]${BLUE} ==> Set cursor\n---------------------------------------------------------------------\n${WHITE}"
 ~/dotfiles/.config/viegphunt/setcursor.sh
 
 # Stow
