@@ -41,13 +41,18 @@ sudo pacman -Syu --noconfirm
 # Download some terminal tool
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[3/10]${GREEN} ==> Download some terminal tool\n---------------------------------------------------------------------\n${WHITE}"
 sudo pacman -S --noconfirm --needed base-devel git
-git clone https://aur.archlinux.org/yay
-cd yay
-makepkg -si --noconfirm
-cd $root_dir
-rm -rf root_dir/yay
 
-
+if command -v yay &> /dev/null; then
+        echo -e "${GREEN}✓ yay instalado com sucesso!$${GREEN\n"
+    else
+        echo -e "${YELLOW}Erro: falha ao instalar yay. Instale manualmente.${YELLOW}"
+        git clone https://aur.archlinux.org/yay
+        cd yay
+        makepkg -si --noconfirm
+        cd $root_dir
+        rm -rf root_dir/yay
+    fi
+    
 pacman_packages=(
     # System monitoring and fun terminal visuals
     btop fastfetch starship
