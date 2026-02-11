@@ -47,7 +47,7 @@ pacman_packages=(
     btop fastfetch starship
 
     # Essential utilities
-    make curl wget unzip ripgrep fd eza bat zoxide neovim stow lazygit duf
+    make curl wget unzip ripgrep fd eza bat zoxide neovim stow lazygit duf wl-clipboard
 
     # Programming languages
     python3 python-pip nodejs npm
